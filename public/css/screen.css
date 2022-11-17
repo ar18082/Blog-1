@@ -1,0 +1,25 @@
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    width: 20%;
+}
+
+td {
+    text-align: center;
+}
+
+
+

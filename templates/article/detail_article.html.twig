@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Détail Article!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    <h1>{{ controller_name }}</h1>
+
+    <h2>{{ votez }}</h2>
+
+
+
+    <button type="button" class="btn btn-primary">Up</button> 
+    <button type="button" class="btn btn-primary">Down</button>
+     <span>+ <span class="js-vote-total">6</span></span>   
+  
+
+</div>
+{% endblock %}
+
+
+{% block javascripts %}
+{# ne pas overrider le script parent #}
+  {{ parent() }}
+  <script src="{{ asset('js/vote.js') }}"></script>
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Hello Article page!{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    <h1>{{ controller_name }}</h1>
+
+    <h2>Lien vers detail de l'article</h2>
+    <a href="{{ path('afficher_article') }}">Lien</a>
+
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{# ne pas overrider le script parent #}
+ {{ parent() }}
+ <script src="{{ asset('js/vote.js') }}"></script>
+{% endblock %}
+
+
+
+

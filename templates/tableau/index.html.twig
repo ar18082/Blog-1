@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TableauController!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    {# Afficher les valeurs du tableau #}
+    <h2>Tableau : longueur {{ nbrTab|length }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre paire</th>
+                <th>Nombre impair</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for val in nbrTab %}
+                {% if  val % 2 == 0 %} 
+                    <tr>
+                        <td>{{ val }}</td>            
+                    </tr>
+                
+                {% else %}
+                    <tr>
+                        <td></td>
+                        <td>{{ val }}</td>            
+                    </tr>
+                {% endif %}
+
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Valeur aléatoire de mon tableau : {{ random(nbrTab) }}</h2>        
+    <table>
+        <thead>
+            <tr>
+                
+                <th>String</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for val in stringTab %}
+                <tr>
+                    <td>{{ val }}</td>            
+                </tr>   
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Valeur aléatoire de mon tableau : {{ random(stringTab) }}</h2>   
+</div>
+{% endblock %}
