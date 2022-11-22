@@ -8,10 +8,13 @@
 
 
 <div class="example-wrapper">
-    <h1>{{ controller_name }}</h1>
-
-    <h2>Lien vers detail de l'article</h2>
-    <a href="{{ path('afficher_article') }}">Lien</a>
+   
+<ul>
+   {% for article in tabArticles %}
+        <li><a href="{{ path('afficherById', {id: article.id}) }}">{{ article.titre }}</a></li>
+    {% endfor %}
+</ul>
+    
 
 </div>
 {% endblock %}

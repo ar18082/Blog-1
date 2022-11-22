@@ -7,7 +7,26 @@
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
+
+
+    <h2>Lien vers detail de l'article</h2>
+    <a href="{{ path('detail_article') }}">Lien</a>
+
+    
+
+    <h2>Utilisation du javascript</h2>
+    <div class="d-flex justify-content-center">
+        <div class="vote-arrows flex-fill pt-2 js-vote-arrows" style="min-width: 90px;">
+            <a class="vote-up" href="#" data-direction="up"><i class="far fa-arrow-alt-circle-up"></i></a>
+            <a class="vote-down" href="#" data-direction="down"><i class="far fa-arrow-alt-circle-down"></i></a>
+            <span>+ <span class="js-vote-total">6</span></span>
+        </div>
+    </div>
 </div>
+{% endblock %}
 
-
+{% block javascripts %}
+{# ne pas overrider le script parent #}
+  {{ parent() }}
+  <script src="{{ asset('js/vote.js') }}"></script>
 {% endblock %}
