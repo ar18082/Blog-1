@@ -19,6 +19,7 @@ class HomeController extends AbstractController
     #[Route('/{id}/vote/{direction}', name: 'app_comment')]
     public function commentVote($id, $direction)
     {
+
         if($direction === 'up'){
             $currentVoteCount = rand(7,100);
         }else{

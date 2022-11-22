@@ -1,4 +1,4 @@
-let xhr = new XMLHttpRequest();
+/*let xhr = new XMLHttpRequest();
 xhr.open(
     'GET',
     'det_article/?id=10&direction=up'
@@ -21,41 +21,23 @@ xhr.onreadystatechange = function(){
             }
         break;
     }
-}
+}*/
 
 
-/*
+
 var $container = $('.js-vote-arrows');
 $container.find('a').on('click', function (e) {
     e.preventDefault();
     var $link = $(e.currentTarget);
 
     $.ajax({
-        url: '/article/10/vote/' + $link.data('direction'),
+        url: 'http://127.0.0.1/ProjetEcole/Framework_Symfony/Blog-1/public/index.php/10/vote/' + $link.data('direction'),
         method: 'GET'
     }).then(function (data) {
+
+       
         $container.find('.js-vote-total').text(data.votes);
     });     
 
-   
+    
 });
-/*
-var $container = $('.js-vote-arrows');
-$container.find('a').on('click', function (e) {
-    $.ajax({
-        url: '/article/10/vote/' + $link.data('direction'),
-        method: 'GET',
-        dataType: "json"
-    })
-
-    //Lors d'un clic sur le div...
-    $(".js-vote-arrows").click(function () {
-        //...On inverse les classes de p
-        $("p").toggleClass("afficher cacher");
-        //Les éléments avec .afficher seront visibles
-        $(".afficher").show();
-        //Les éléments avec .cacher seront cachés
-        $(".cacher").hide();
-    });
-
-*/
